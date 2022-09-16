@@ -12,6 +12,7 @@ app "targetable-runners-demo" {
       use "docker" {
         image = "192.168.1.129:5050/tr-demo"
         tag = "latest"
+        insecure = true
       }
     }
   }
