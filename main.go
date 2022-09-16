@@ -1,10 +1,10 @@
 package main
 
 import (
-	"os"
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 func rootServer(w http.ResponseWriter, r *http.Request) {
@@ -54,8 +54,8 @@ func main() {
 	http.HandleFunc("/", http.HandlerFunc(rootServer))
 	http.Handle("/static/", assetServer)
 
-	fmt.Printf("Starting server at: http://0.0.0.0:3030\n")
-	if err := http.ListenAndServe("0.0.0.0:3030", nil); err != nil {
+	fmt.Printf("Starting server at: http://0.0.0.0:3000\n")
+	if err := http.ListenAndServe("0.0.0.0:3000", nil); err != nil {
 		log.Fatal(err)
 	}
 }
