@@ -1,5 +1,5 @@
-project = "example-go"
-app "example-go" {
+project = "targetable-runners-demo"
+app "targetable-runners-demo" {
 
   // New runner profile targeting
   runner {
@@ -7,7 +7,14 @@ app "example-go" {
   }
 
   build {
-    use "pack" {}
+    use "docker" {
+      registry {
+        use "docker" {
+          image = "192.168.1.129:5000/tr-demo"
+          tag = "latest"
+        }
+      }
+    }
   }
   deploy {
     use "kubernetes" {}
