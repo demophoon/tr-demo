@@ -10,9 +10,8 @@ app "targetable-runners-demo" {
     use "docker" {}
     registry {
       use "docker" {
-        image = "192.168.1.129:5050/tr-demo"
+        image = "registry.services.demophoon.com/tr-demo"
         tag = "latest"
-        insecure = true
       }
     }
   }
