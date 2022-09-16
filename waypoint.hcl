@@ -1,5 +1,5 @@
-project = "targetable-runners-demo"
-app "targetable-runners-demo" {
+project = "targetable-runners"
+app "targetable-runners" {
 
   // New runner profile targeting
   runner {
